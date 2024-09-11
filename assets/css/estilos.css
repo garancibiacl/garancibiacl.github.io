@@ -1,3 +1,9 @@
+
+:root { 
+
+  --default-color: #f34852; 
+}
+
 body {
   font-family: "Raleway", sans-serif;
 
@@ -10,19 +16,64 @@ body {
   background-color: #202335;
 }
 
-/* Hero Section */
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
 
 #Hero-Section {
   background-image: url("../img/bg-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
+  
 }
 
+.social-links a {
+  background-color: gray;
+  color: #ffffff;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.social-links a:hover{
+  background-color: var(--default-color);
+}
+
+/*--------------------------------------------------------------
+# Servicios Section
+--------------------------------------------------------------*/
+
+.servcios{
+  position: relative; 
+  display: inline-block; 
+  padding-bottom: 40px;
+}
+
+.servicios h2:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 128px;
+  height: 3px;
+  background: var(--default-color);
+  margin: auto;
+
+}
+
+
+
+
+
+
+
 /* Mis trabajos */
-
-
-
 #Mis-trabajos .image-top {
   height: 250px;
   background-repeat: no-repeat;
