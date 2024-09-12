@@ -1,7 +1,12 @@
 
+/* Colores globales: las siguientes variables de color se utilizan en todo el sitio web. Actualizarlos aquí cambiará la combinación de colores de todo el sitio web */
 :root { 
 
   --default-color: #f34852; 
+}
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,7 +34,7 @@ body {
 }
 
 .social-links a {
-  background-color: gray;
+  background-color: #2b2e42;
   color: #ffffff;
   font-size: 20px;
   width: 40px;
@@ -65,6 +70,15 @@ body {
   background: var(--default-color);
   margin: auto;
 
+}
+
+.service-item{
+  background-color: #2b2e42;
+  padding: 50px 30px;
+  transition: all ease-in-out 0.3s;
+  border-radius: 18px;
+  height: 100%;
+            
 }
 
 
