@@ -1,25 +1,65 @@
 
 /* Colores globales: las siguientes variables de color se utilizan en todo el sitio web. Actualizarlos aquí cambiará la combinación de colores de todo el sitio web */
 :root { 
-
+  --background-color: #222538;
   --default-color: #f34852; 
+  --heading-color: #e0e5e9;
+  --accent-color: #3b5d95;
+  --contrast-color: #404d67; 
+  --surface-color: #2b2e42;
+  
+  
 }
-/* Smooth scroll */
-:root {
+
+
+ /* Estilo para el scroll suave */
+html {
   scroll-behavior: smooth;
 }
 
+/*--------------------------------------------------------------
+# Stilos General Clases
+--------------------------------------------------------------*/
+
 body {
   font-family: "Raleway", sans-serif;
+  background-color: var(--background-color);
 
-  background-color: #222538;
-  color: #f34852;
 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li{
+  color: var(--heading-color);
+  font-family: var(--heading-font);
 }
 
 .bg-nav{
-  background-color: #202335;
+  background-color: var(--background-color)
 }
+.code-color{
+  color: var(--default-color);
+}
+.title-default{
+  color: var(--default-color);
+}
+
+section, .section {
+    scroll-margin-top: 80px;
+    overflow: clip;
+}
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -34,7 +74,7 @@ body {
 }
 
 .social-links a {
-  background-color: #2b2e42;
+  background-color:var(--contrast-color);
   color: #ffffff;
   font-size: 20px;
   width: 40px;
@@ -73,14 +113,46 @@ body {
 }
 
 .service-item{
-  background-color: #2b2e42;
+  background-color: var(--surface-color);
   padding: 50px 30px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
   height: 100%;
+ 
             
 }
+.service-item i{
+  color: var(--default-color);
+}
 
+/*--------------------------------------------------------------
+# Resumen Section
+--------------------------------------------------------------*/
+
+.cv-section {
+  background: var(--surface-color);
+  border-radius: 18px;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+/*.cv-section h2 {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}*/
+.badge {
+  margin-right: 5px;
+  background-color: var(--accent-color);
+}
+
+.icons{
+  display: flex;
+  padding: .5rem 0;
+  width: 120px;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  gap: 10px;
+}
 
 
 
@@ -95,9 +167,7 @@ body {
   background-position: center;
 }
 
-.red-color{
-  color: #f34852;
-}
+
 
 
 .separator {
