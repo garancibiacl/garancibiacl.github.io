@@ -30,7 +30,8 @@ h5,
 h6,
 p,
 span,
-li {
+li
+ {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
@@ -45,11 +46,17 @@ li {
   color: var(--default-color);
 }
 
+.social-links a i{
+  color: var(--heading-color);
+}
+
+
 section,
 .section {
   scroll-margin-top: 80px;
   overflow: clip;
 }
+
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -80,6 +87,10 @@ section,
   background-color: var(--default-color);
 }
 
+i{
+  color: var(--heading-color);
+}
+
 /*--------------------------------------------------------------
 # Servicios Section
 --------------------------------------------------------------*/
@@ -100,16 +111,76 @@ section,
   margin: auto;
 }
 
+
+
 .service-item {
   border: 1px solid var(--accent-color);
   padding: 50px 30px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
   height: 100%;
+  transition: background-color 0.3s, color 0.3s; 
+  color: var(--heading-color);
 }
+
+
+.service-item:hover  {
+  background-color: var(--heading-color);
+  border: 0px solid;
+
+
+}
+
 .service-item i {
-  color: var(--default-color);
+
+  color: var(--default-color)
+
+
 }
+
+
+  p h4 .service-item{
+  color: var(--heading-color);
+
+}
+
+.service-item h4 {
+  color: var(--heading-color);
+
+}
+
+.service-item:hover p {
+  color: var(--background-color);
+
+
+}
+
+.service-item:hover h4 {
+  color: var(--background-color);
+
+
+}
+
+
+
+
+
+.service-item:hover i {
+  color: var(--background-color);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Resumen Section
