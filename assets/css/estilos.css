@@ -1,18 +1,14 @@
-
 /* Colores globales: las siguientes variables de color se utilizan en todo el sitio web. Actualizarlos aquí cambiará la combinación de colores de todo el sitio web */
-:root { 
+:root {
   --background-color: #222538;
-  --default-color: #f34852; 
+  --default-color: #f34852;
   --heading-color: #e0e5e9;
   --accent-color: #3b5d95;
-  --contrast-color: #404d67; 
+  --contrast-color: #404d67;
   --surface-color: #2b2e42;
-  
-  
 }
 
-
- /* Estilo para el scroll suave */
+/* Estilo para el scroll suave */
 html {
   scroll-behavior: smooth;
 }
@@ -24,8 +20,6 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   background-color: var(--background-color);
-
-
 }
 
 h1,
@@ -36,30 +30,26 @@ h5,
 h6,
 p,
 span,
-li{
+li {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
 
-.bg-nav{
-  background-color: var(--background-color)
+.bg-nav {
+  background-color: var(--background-color);
 }
-.code-color{
+.code-color {
   color: var(--default-color);
 }
-.title-default{
+.title-default {
   color: var(--default-color);
 }
 
-section, .section {
-    scroll-margin-top: 80px;
-    overflow: clip;
+section,
+.section {
+  scroll-margin-top: 80px;
+  overflow: clip;
 }
-
-
-
-
-
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -70,11 +60,10 @@ section, .section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-  
 }
 
 .social-links a {
-  background-color:var(--contrast-color);
+  background-color: var(--contrast-color);
   color: #ffffff;
   font-size: 20px;
   width: 40px;
@@ -87,7 +76,7 @@ section, .section {
   transition: 0.3s;
 }
 
-.social-links a:hover{
+.social-links a:hover {
   background-color: var(--default-color);
 }
 
@@ -95,33 +84,30 @@ section, .section {
 # Servicios Section
 --------------------------------------------------------------*/
 
-.servcios{
-  position: relative; 
-  display: inline-block; 
+.servcios {
+  position: relative;
+  display: inline-block;
   padding-bottom: 40px;
 }
 
 .servicios h2:after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 128px;
   height: 3px;
   background: var(--default-color);
   margin: auto;
-
 }
 
-.service-item{
+.service-item {
   background-color: var(--surface-color);
   padding: 50px 30px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
   height: 100%;
- 
-            
 }
-.service-item i{
+.service-item i {
   color: var(--default-color);
 }
 
@@ -145,19 +131,14 @@ section, .section {
   background-color: var(--accent-color);
 }
 
-.icons{
+.icons {
   display: flex;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   width: 120px;
   justify-content: space-between;
   font-size: 1.3rem;
   gap: 10px;
 }
-
-
-
-
-
 
 /* Mis trabajos */
 #Mis-trabajos .image-top {
@@ -166,9 +147,6 @@ section, .section {
   background-size: cover;
   background-position: center;
 }
-
-
-
 
 .separator {
   border: none; /* Elimina el borde predeterminado */
@@ -189,8 +167,7 @@ section, .section {
     font-weight: 400;
   }
 
-  .navbar-brand{
+  .navbar-brand {
     width: 100px;
   }
-
 }
