@@ -101,7 +101,7 @@ section,
 }
 
 .service-item {
-  background-color: var(--surface-color);
+  border: 1px solid var(--accent-color);
   padding: 50px 30px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
@@ -138,6 +138,9 @@ section,
   justify-content: space-between;
   font-size: 1.3rem;
   gap: 10px;
+}
+li::marker {
+  color: var(--default-color);
 }
 
 /* Mis trabajos */
