@@ -197,6 +197,10 @@ i{
   padding-bottom: 10px;
   margin-bottom: 20px;
 }*/
+
+.cv-section i{
+  color: var(--default-color);
+}
 .badge {
   margin-right: 5px;
   background-color: var(--accent-color);
@@ -215,13 +219,16 @@ li::marker {
 }
 
 /* Mis trabajos */
-#Mis-trabajos .image-top {
-  height: 250px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+ .card-back{
+  background: var(--surface-color);
 
+}
+.card-back:hover{
+  border: 2px solid var(--accent-color);
+}
+.card-title{
+  color: var(--heading-color);
+}
 .separator {
   border: none; /* Elimina el borde predeterminado */
   height: 4px; /* Grosor de la línea */
