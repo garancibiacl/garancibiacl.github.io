@@ -1,5 +1,5 @@
 
-&#128425; Desarrollo Web - Desafio Latam
+&#128425; Introducción al Desarrollo Web - Desafio Latam
 
  # 🥤 Consigna
 - En este desafío donde deberás actualizar tu curriculum y portafolio dejándolo disponible en
@@ -11,9 +11,9 @@ sección de experiencia y footer.
  # 🗒️ Descripción del Proyecto
 Crear Portafolio para presentar para futuros trabajos
 
-# ✅ Entrega:
+# ✅ Entrega Final:
 
-  Proyecto Final. Semana #9
+  Semana de Prueba. Trabajo colaborativo y Github pages
 
 
 
