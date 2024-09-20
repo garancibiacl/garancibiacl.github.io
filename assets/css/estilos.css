@@ -236,11 +236,30 @@ li::marker {
   margin: 20px 0; /* Espaciado superior e inferior */
   width: 10%;
 }
+
+
+
 /* Contacto */
 
-#Contacto form label {
+.form-control{
+  background: var(--surface-color);
+  border: var(--default-color);
+  color: var(--default-color);
+  
+}
+.form-control:focus{
+  background: var(--surface-color);
+  border: 2px solid var(--default-color);
+  color: var(--default-color);
+}
+
+#contacto form label {
   font-weight: 700;
-  color: #373a3c;
+
+}
+
+.form-control::placeholder {
+  color: #6c757d;
 }
 
 @media (max-width: 768px) {
