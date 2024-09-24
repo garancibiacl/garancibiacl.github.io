@@ -1,5 +1,15 @@
-/* Colores globales: las siguientes variables de color se utilizan en todo el sitio web. Actualizarlos aquí cambiará la combinación de colores de todo el sitio web */
+
+
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+
+
+
+/*========== Colors ==========*/
 :root {
+  --background-default: #070a1b;
   --background-color: #222538;
   --default-color: #f34852;
   --heading-color: #e0e5e9;
@@ -13,13 +23,21 @@ html {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# Stilos General Clases
---------------------------------------------------------------*/
+
+
+/*========== Stilos General Clases ==========*/
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: "Raleway", sans-serif;
   background-color: var(--background-color);
+  /*background-image: radial-gradient(circle farthest-side at 75% 50%, #311566, var(--background-default) 62%);*/
 }
 
 h1,
@@ -49,6 +67,57 @@ li
 .social-links a i{
   color: var(--heading-color);
 }
+
+.navbar-brand{
+  color: #ffffff;
+}
+
+/* Estilos del navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1000;
+
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+
+
+}
+
+
+
+
+
+/* Estilos del navbar */
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link, 
+.navbar-dark .navbar-brand {
+  color: #fff; /* Texto blanco por defecto */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.navbar.scrolled {
+  background-color: #fff !important; /* Cambia el fondo a blanco al hacer scroll */
+}
+
+.navbar.scrolled .navbar-nav .nav-link, 
+.navbar.scrolled .navbar-brand {
+  color: #000 !important; /* Cambia el texto a negro al hacer scroll */
+}
+
 
 
 section,
