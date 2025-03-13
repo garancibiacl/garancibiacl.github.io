@@ -348,3 +348,53 @@ li::marker {
     width: 100px;
   }
 }
+
+
+.typewriter {
+  font-size: 2rem;
+  font-weight: bold;
+  border-right: 3px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  min-width: 11ch; /* Mantiene el tamaño del bloque */
+  text-align: center;
+}
+
+.block {
+  background-color: #343a40; /* Color de fondo por defecto */
+  color: white;
+  padding: 88px 0px 0px 16px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  height: 250px; /* Altura fija */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.block .icon {
+  font-size: 40px; /* Tamaño del icono */
+  margin-bottom: 20px; /* Espacio entre el icono y el texto */
+  transition: color 0.3s; /* Transición suave para el icono */
+}
+
+.block .text {
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #007bff; /* Cambia el color de fondo al pasar el cursor */
+  color: #ffffff; /* Cambia el color del texto */
+  transform: translateY(-5px); /* Efecto de elevar el bloque */
+  cursor: pointer;
+}
+
+.block:hover .icon {
+  color: #ffffff; /* Cambia el color del icono al pasar el cursor */
+}
+
+.block:hover .text {
+  color: #ffffff; /* Cambia el color del texto */
+}
