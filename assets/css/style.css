@@ -3,8 +3,16 @@
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
 
+
+
+
+/*========== Fonts ==========*/
+:root {
+  --heading-font: 
+}
 
 
 /*========== Colors ==========*/
@@ -35,7 +43,7 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Onest", sans-serif;
   background-color: var(--background-color);
   /*background-image: radial-gradient(circle farthest-side at 75% 50%, #311566, var(--background-default) 62%);*/
 }
