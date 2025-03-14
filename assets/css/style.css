@@ -114,17 +114,23 @@ li
 .navbar-dark .navbar-nav .nav-link, 
 .navbar-dark .navbar-brand {
   color: #fff; /* Texto blanco por defecto */
-  transition: color 0.3s ease; /* Transición suave para el color */
+  transition: all 0.3s ease-in-out; /* Transición suave para el color */
+
 }
 
 .navbar.scrolled {
   background-color: #fff !important; /* Cambia el fondo a blanco al hacer scroll */
+  background: rgba(255, 255, 255, 0.6) !important; /* Más transparencia */
+  backdrop-filter: blur(10px); /* Aplica desenfoque */
+  -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
 }
 
 .navbar.scrolled .navbar-nav .nav-link, 
 .navbar.scrolled .navbar-brand {
   color: #000 !important; /* Cambia el texto a negro al hacer scroll */
 }
+
+
 
 
 
