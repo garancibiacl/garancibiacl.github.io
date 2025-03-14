@@ -40,3 +40,15 @@ function typeEffect() {
 }
 
 typeEffect();
+
+function copiarAlPortapapeles(texto) {
+  navigator.clipboard.writeText(texto)
+      .then(() => {
+          console.log("Texto copiado al portapapeles ✅");
+      })
+      .catch(err => {
+          console.error("Error al copiar el texto", err);
+      });
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
