@@ -11,7 +11,7 @@ window.onscroll = function() {
 };
 
 
-let text = "Soy Gustavo";
+let text = "Dev Front-End";
 let i = 0;
 let isDeleting = false; 
 let speed = 150; // Velocidad de tipeo
