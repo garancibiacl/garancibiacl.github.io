@@ -3,7 +3,7 @@ let navbar = document.getElementById('navbar');
 
 // Agregamos un evento de scroll
 window.onscroll = function() {
-  if (window.pageYOffset > 50) { // Cambia cuando se haya desplazado más de 50px
+  if (window.pageYOffset > 10) { // Cambia cuando se haya desplazado más de 50px
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
@@ -52,3 +52,18 @@ function copiarAlPortapapeles(texto) {
 }
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+function copiarEmail() {
+    const email = document.getElementById("email").textContent;
+    navigator.clipboard.writeText(email).then(() => {
+        Swal.fire({
+            icon: 'success',
+            title: '¡Copiado!',
+            text: 'El email ha sido copiado al portapapeles.',
+            timer: 2000,
+            showConfirmButton: false
+        });
+    }).catch(err => {
+        console.error('Error al copiar:', err);
+    });
+}

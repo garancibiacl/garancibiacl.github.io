@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Gustavo Arancibia | Desarrollador Frontend</title>
+    <title>Gustavo Arancibia | Portafolio 2025</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
    
@@ -181,9 +181,9 @@
  
         <div class="row pt-5 pb-5">
             <!-- Columna Izquierda -->
-            <div class="col-md-4">
+            <div class="col-md-4 ">
                 <!-- Sección Perfil -->
-                <div class="cv-section text-start">
+                <div class="cv-section text-star rounded-4 text-start ">
                     <h2>Gustavo Arancibia C.</h2>
                     <p class="title-default"> Tecnólogo Informático & <strong>Developer Web</strong></p>
                     <span> 🌐  Santiago, Chile</span>
@@ -200,13 +200,13 @@
                     </div>
                 </div>
 
-                <div class="cv-section text-start">
+                <div class="cv-section text-start rounded-4">
                     <h2>Perfil</h2>
                     <p> Profesional que trabaja el desarrollo de interfaces gráficas, dedicado a la implementación de soluciones web con foco en performance, habilidad con CSS y HTML (semántica y accesibilidad).</p>
                 </div>
 
                 <!-- Sección Habilidades -->
-                <div class="cv-section text-start">
+                <div class="cv-section text-start rounded-4">
                     <h2>Skills</h2>
                     <ul class="list-inline">
                         <li class="list-inline-item badge  text-white">Html</li>
@@ -231,7 +231,7 @@
             <!-- Columna Derecha -->
             <div class="col-md-8">
                 <!-- Sección Experiencia -->
-                <div class="cv-section text-start">
+                <div class="cv-section text-start rounded-4">
                     <h2>Experiencia</h2>
                     <div class="mb-3">
                         <h5>Programador HTML</h5>
@@ -252,7 +252,7 @@
                 </div>
 
                 <!-- Sección Educación -->
-                <div class="cv-section text-start">
+                <div class="cv-section text-start rounded-4">
                     <h2>Educación</h2>
                     <div class="mb-3">
                         <h5><strong>Full Stack JavaScript</strong> </h5>
@@ -292,7 +292,9 @@
                     <img src="/assets/img/emed-trizano.png" class="img-fluid  card-img-top" alt="Emed Trizano">
                     <div class="card-body">
                       <h5 class="card-title fw-bold">Emed Trizano</h5>
-                      <p class="card-text">Desarrollé un sitio web informativo para medicos de la region de temuco</p>
+                      <hr class="text-secondary  opacity-85"> 
+                      <p class="card-text">Desarrollé un sitio web informativo para medicos de la región de temuco</p>
+                      <hr class="text-secondary  opacity-85"> 
                       <span class="badge text-bg-secondary">Wordpress</span>
                       <span class="badge text-bg-secondary">Theme Divi</span>
                       <div class="col pt-4">
@@ -308,7 +310,9 @@
                 <img src="/assets/img/3d-draw.png" class="img-fluid  card-img-top" alt="App 3Draw E-commerce">
                 <div class="card-body">
                   <h5 class="card-title fw-bold">3Draw E-commerce</h5>
+                  <hr class="text-secondary  opacity-85"> 
                   <p class="card-text">Aplicación utilizando el CLI con el nombre de tu tienda</p>
+                  <hr class="text-secondary  opacity-85"> 
                   <span class="badge text-bg-secondary">React Js</span>
                   <span class="badge text-bg-secondary">Bootswatch</span>
                   <span class="badge text-bg-secondary">Sass</span>
@@ -328,7 +332,9 @@
             <img src="/assets/img/dayly-task.png" class="img-fluid  card-img-top" alt="App dayle tasks">
             <div class="card-body">
               <h5 class="card-title fw-bold">Dayle Tasks</h5>
+              <hr class="text-secondary  opacity-85"> 
               <p class="card-text">Una App de Planificador de tareas para organizar tu trabajo y tu vida</p>
+              <hr class="text-secondary  opacity-85"> 
               <span class="badge text-bg-secondary">JavaScript</span>
               <span class="badge text-bg-secondary">Html</span>
               <span class="badge text-bg-secondary">Bootstrap</span>
@@ -399,12 +405,12 @@
         
                 <!-- Bloque 3 -->
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="block">
+                    <div class="block" onclick="copiarEmail()">
                         <div class="icon">
                             <i class='bx bx-copy' ></i>
                         </div>
                         <div class="text">
-                            <p>Copy my email</p> <!-- Texto -->
+                            <p >Copy my email:</p> <p class="d-none" id="email">garancibiacl@gmail.com</p><!-- Texto -->
                
                         </div>
                     </div>
@@ -447,6 +453,7 @@
       
 <script src="/assets/js/main.js"></script>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  
 </body>
 
