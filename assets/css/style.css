@@ -405,3 +405,17 @@ li::marker {
 .block:hover .text {
   color: var(--hover-color-white); /* Cambia el color del texto */
 }
+
+/* Secciones */
+.section {
+  opacity: 0;  /* Oculto por defecto */
+  transform: translateY(50px); /* Desplazamiento inicial */
+  transition: opacity 0.2s ease-out, transform 0.9s ease-out;
+}
+
+/* Cuando la sección es visible */
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
