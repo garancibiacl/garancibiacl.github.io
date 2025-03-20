@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (entry.isIntersecting) {
                 const animation = entry.target.getAttribute("data-animation"); 
                 entry.target.classList.add("animate__animated", animation, "visible");
+                observer.unobserve(entry.target); // Mejora el rendimiento
             }
         });
     }, { threshold: 0.3 }); // Se activa cuando el 30% de la sección es visible
@@ -85,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(section);
     });
 });
-
 
 
 

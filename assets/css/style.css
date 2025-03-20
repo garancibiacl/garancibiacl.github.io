@@ -418,4 +418,9 @@ li::marker {
   opacity: 1;
   transform: translateY(0);
 }
-
+/* Compatibilidad con Safari */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .section {
+      will-change: opacity, transform;
+  }
+}
