@@ -70,24 +70,22 @@ function copiarEmail() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    let sections = document.querySelectorAll(".animar");
+    const sections = document.querySelectorAll(".animar");
 
-    let observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                let animation = entry.target.getAttribute("data-animation"); 
+                const animation = entry.target.getAttribute("data-animation"); 
                 entry.target.classList.add("animate__animated", animation, "visible");
-            } else {
-                // Si la sección deja de ser visible, la ocultamos nuevamente
-                entry.target.classList.remove("visible", "animate__animated", entry.target.getAttribute("data-animation"));
             }
         });
-    }, { threshold: 0.5 }); // Se activa cuando el 50% de la sección es visible
+    }, { threshold: 0.3 }); // Se activa cuando el 30% de la sección es visible
 
     sections.forEach(section => {
         observer.observe(section);
     });
 });
+
 
 
 
