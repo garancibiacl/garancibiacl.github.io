@@ -369,7 +369,6 @@ li::marker {
 }
 
 .block {
-  background-color: #343a40; /* Color de fondo por defecto */
   color: white;
   padding: 88px 0px 0px 16px;
   border-radius: 10px;
@@ -392,7 +391,6 @@ li::marker {
 }
 
 .block:hover {
-  background-color: #475086; /* Cambia el color de fondo al pasar el cursor */
   color: var(--hover-color-white); /* Cambia el color del texto */
   transform: translateY(-5px); /* Efecto de elevar el bloque */
   cursor: pointer;
@@ -418,9 +416,111 @@ li::marker {
   opacity: 1;
   transform: translateY(0);
 }
-/* Compatibilidad con Safari */
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-  .section {
-      will-change: opacity, transform;
-  }
+
+
+.card {
+  background: linear-gradient(358deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+
+   /* Indicador de scroll */
+   .scroll-indicator {
+    position: fixed;
+    right: 400px;
+    top: 70%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.scroll-line {
+    width: 4px;
+    height: 100px;
+    background: linear-gradient(180deg, #f34852, #e0222d, #bc1923);
+    animation: scrollEffect 1.5s infinite ease-in-out;
+}
+
+@keyframes scrollEffect {
+    0% {
+        height: 40px;
+        opacity: 0.5;
+    }
+    50% {
+        height: 100px;
+        opacity: 1;
+    }
+    100% {
+        height: 40px;
+        opacity: 0.5;
+    }
+}
+
+.mouse-icon {
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--default-color);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.mouse-wheel {
+    width: 6px;
+    height: 10px;
+    background: var(--default-color);
+    border-radius: 3px;
+    animation: wheelMove 1.5s infinite;
+}
+
+@keyframes wheelMove {
+  0% { transform: translateY(-5px); opacity: 0.6; }
+  50% { transform: translateY(5px); opacity: 1; }
+  100% { transform: translateY(-5px); opacity: 0.6; }
+}
+
+ /* Efecto hover */
+ .scroll-indicator:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-indicator:hover .scroll-line {
+  background: linear-gradient(180deg, #f34852, #e0222d, #bc1923);
+  box-shadow: 0 0 10px #e0222d;
+}
+
+.scroll-indicator:hover .mouse-icon {
+  box-shadow: 0 0 15px #e0222d;
 }

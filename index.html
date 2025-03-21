@@ -85,8 +85,8 @@
         </div>
     </nav>
 
-    <header class="text-light text-start py-5  section animar" data-animation="animate__fadeIn">
-        <div class="container">
+    <header class="text-light text-start pt-5 py-5   section animar" data-animation="animate__fadeIn">
+        <div class="container pt-5">
             <div class="row pt-3 ">
                 <div class="col-12 col-md-7 ">
                     <h1 class="display-1 fw-bold animate__animated animate__fadeInUp animate__delay-1s"  >
@@ -97,6 +97,14 @@
                     </p>
                
                 </div>
+                <div class="col-12 col-md-5 ">
+                <div class="scroll-indicator" id="scrollIndicator">
+                    <div class="scroll-line"></div>
+                    <div class="mouse-icon">
+                        <div class="mouse-wheel"></div>
+                    </div>
+                </div>
+            </div>
 
                 <div class="social-links pb-3">
                     <a class="text-decoration-none animate__animated animate__fadeIn animate__delay-2s" href="mailto:garancibiacl@gmail.com" target="_blank">
@@ -121,7 +129,7 @@
     </header>
 
     <!--  Start Section Servicios-->
-    <section id="services" class="container text-center pt-4 section animar" data-animation="animate__fadeIn">
+    <section id="nextSection" class="container text-center pt-4 section animar" data-animation="animate__fadeIn">
         <div class="row text-start pb-3 ">
 
             <div class="servicios " >
@@ -174,7 +182,7 @@
     <!--  Fin Section Servicios-->
 
       <!--  Start Section Resumen CVs-->
-      <section id="resume" class="container text-center section animar" data-animation="animate__fadeIn">
+      <section id="nextSection" class="container text-center section animar" data-animation="animate__fadeIn" >
         <div class="row text-start ">
 
             <div class="servicios">
@@ -237,7 +245,7 @@
             <!-- Columna Derecha -->
             <div class="col-md-8">
                 <!-- Sección Experiencia -->
-                <div class="cv-section text-start ">
+                <div class="cv-section rounded-4 text-start ">
                     <h2>Experiencia</h2>
                     <div class="mb-3">
                         <h5>Programador HTML</h5>
@@ -364,9 +372,9 @@
 
 
     <section id="services" class="container text-center pt-5 section animar" data-animation="animate__fadeIn">
-        <div class="row text-start pb-3 ">
+        <div class="row text-start pb-3 pt-5 ">
 
-            <div class="servicios">
+            <div class="servicios pb-5">
                 <p class="text-light fs-4">¿Qué tienes en mente? </p>
                 <h2 class="display-3 fw-bold title-default">Contacto</h2>
             </div>
@@ -380,7 +388,7 @@
             <div class="row">
                 <!-- Bloque 1 -->
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="block">
+                    <div class="block card card">
                         <a class="text-decoration-none" href="https://www.linkedin.com/in/gustavoarancibiacl/" target="_blank"> 
                         <div class="icon">
                             <i class='bx bxl-linkedin'></i>
@@ -394,7 +402,7 @@
         
                 <!-- Bloque 2 -->
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="block" >
+                    <div class="block card" >
                   
                         <a class="text-decoration-none" href="/assets/docs/CV-GustavoArancibia-Front-UI.pdf" download="CV-GustavoArancibia-Front-UI.pdf"> 
                         <div class="icon">
@@ -411,7 +419,7 @@
         
                 <!-- Bloque 3 -->
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="block" onclick="copiarEmail()">
+                    <div class="block card" onclick="copiarEmail()">
                         <div class="icon">
                             <i class='bx bx-copy' ></i>
                         </div>
