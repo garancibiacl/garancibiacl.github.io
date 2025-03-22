@@ -48,44 +48,19 @@
 </head>
 
 <body>
-    <nav id="navbar" class="scrolled  navbar navbar-expand-lg  bg-nav fixed-top navbar-blur"   >
-        <div class="container">
-            <a class=" navbar-brand fw-bold " href="#" ><> <span class="code-color">Dev</span><strong>Front</strong> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class=" collapse navbar-collapse navbar-dark " id="navbarSupportedContent" >
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5" >
-                    <li class="nav-item">
-                        <a class="nav-link active " data-bs-theme="dark" href="#">Home</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Servicios</a>
-                    </li>
+        <!--  Start Section Nav-->
+        <nav class="floating-nav">
+            <a href="#home" class="nav-item" data-tooltip="Inicio"><i class="fas fa-home"></i></a>
+            <a href="#services" class="nav-item" data-tooltip="Servicios"><i class="fas fa-cogs"></i></a>
+            <a href="#summary" class="nav-item" data-tooltip="Resumen"><i class="fas fa-file-alt"></i></a>
+            <a href="#contact" class="nav-item" data-tooltip="Contacto"><i class="fas fa-envelope"></i></a>
+        </nav>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#resume">Resumen</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portafolio">Proyectos</a>
-                    </li>
-
-                
-
-                </ul>
-                <form class="d-flex" role="search">
-     
-        <button href="#contacto" class="rounded-pill btn btn-outline-danger" type="submit">Contacto</button>
-      </form>
-
-            </div>
-        </div>
-    </nav>
-
-    <header class="text-light text-start pt-5 py-5   section animar" data-animation="animate__fadeIn">
+    <!--  Start Section Header-->
+    <header class="text-light text-start pt-5 py-5 section animar pb-5" data-animation="animate__fadeIn" data-animation-in="animate__fadeIn" 
+    data-animation-out="animate__zoomOut">
         <div class="container pt-5">
             <div class="row pt-3 ">
                 <div class="col-12 col-md-7 ">
@@ -129,10 +104,14 @@
     </header>
 
     <!--  Start Section Servicios-->
-    <section id="nextSection" class="container text-center pt-4 section animar" data-animation="animate__fadeIn">
-        <div class="row text-start pb-3 ">
+    <section id="nextSection" class="container text-center pt-5 pb-5 section animar"  data-animation-in="animate__fadeIn" 
+    data-animation-out="animate__fadeOut">
 
-            <div class="servicios " >
+
+  
+        <div class="row text-start pb-4 ">
+
+            <div class="pb-4 servicios" >
                 <p class="text-light fs-4">Servicios </p>
                 <h2 class="display-3 fw-bold title-default">Skills-Set</h2>
             </div>
@@ -178,14 +157,16 @@
        
 
     </section>
-
     <!--  Fin Section Servicios-->
 
+
+
       <!--  Start Section Resumen CVs-->
-      <section id="nextSection" class="container text-center section animar" data-animation="animate__fadeIn" >
+      <section id="nextSection" class="container text-center section animar pb-5" data-animation="animate__fadeIn" data-animation-in="animate__fadeIn" 
+      data-animation-out="animate__fadeOut" >
         <div class="row text-start ">
 
-            <div class="servicios">
+            <div class="pb-4 servicios pt-5 ">
                 <p class="text-light fs-4">Resumen</p>
                 <h2 class="display-3 fw-bold title-default">Cv Frontend</h2>
             </div>
@@ -285,12 +266,9 @@
     
    </section>
 
-      <!--  Start Section Resumen CVs-->
-
-
-
-
-    <section id="portafolio" class="container bg-portafolio section animar" data-animation="animate__fadeIn">
+      <!--  Start Section Portafolio-->
+    <section id="portafolio" class="container bg-portafolio section animar" data-animation="animate__fadeIn" data-animation-in="animate__fadeIn" 
+    data-animation-out="animate__fadeOut">
 
         <div class="row text-start pb-5 ">
 
@@ -370,8 +348,8 @@
     </section>
 
 
-
-    <section id="services" class="container text-center pt-5 section animar" data-animation="animate__fadeIn">
+ <!--  Start Section Contacto-->
+    <section id="services" class="container text-center pt-5 section animar" data-animation="animate__fadeIn" data-animation="animate__fadeIn" data-animation-in="animate__fadeIn">
         <div class="row text-start pb-3 pt-5 ">
 
             <div class="servicios pb-5">
@@ -441,7 +419,7 @@
 
 
 
-
+ <!--  Start Footer-->
     <footer class="bg-dark text-white text-center text-lg-start py-3 pt">
         <div class="container">
             <div class="row">

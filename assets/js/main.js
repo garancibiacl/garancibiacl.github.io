@@ -69,15 +69,21 @@ function copiarEmail() {
 }
 
 
+// START ANIMACION SECCIONES CON ANIMATE.CSS
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll(".animar");
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
+            const animationIn = entry.target.getAttribute("data-animation-in");
+            const animationOut = entry.target.getAttribute("data-animation-out");
+
             if (entry.isIntersecting) {
-                const animation = entry.target.getAttribute("data-animation"); 
-                entry.target.classList.add("animate__animated", animation, "visible");
-                observer.unobserve(entry.target); // Mejora el rendimiento
+                entry.target.classList.remove("animate__animated", animationOut);
+                entry.target.classList.add("animate__animated", animationIn, "visible");
+            } else {
+                entry.target.classList.remove("animate__animated", animationIn);
+                entry.target.classList.add("animate__animated", animationOut);
             }
         });
     }, { threshold: 0.3 }); // Se activa cuando el 30% de la sección es visible
@@ -87,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
+// FIN ANIMACION SECCIONES CON ANIMATE.CSS
 
 
 document.getElementById("scrollIndicator").addEventListener("click", function() {
