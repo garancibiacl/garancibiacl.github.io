@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.getElementById("scrollIndicator").addEventListener("click", function() {
-    document.getElementById("nextSection").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("services").scrollIntoView({ behavior: "smooth" });
 });
 
 
