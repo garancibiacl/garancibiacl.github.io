@@ -49,12 +49,47 @@
 
 <body>
 
-        <!--  Start Section Nav-->
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top mb-5">
+    <div class="container">
+        <!-- Columna Izquierda: Avatar, Nombre y Rol -->
+        <div class="row w-100">
+            <div class="col-12 col-md-auto d-flex align-items-center justify-content-between">
+                <img src="/assets/img/gustavo.png" alt="Avatar" class="avatar me-3">
+                <div class="user-info">
+                    <span class="user-name">Gustavo Arancibia</span>
+                    <span class="user-role">
+                        <div class="heartbeat-container">
+                            <span class="heartbeat-dot"></span>
+                            <span class="heartbeat-wave"></span>
+                        </div>
+                        Desarrollador Frontend
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Botón Descargar CV -->
+        <div class="col-12 col-md-auto text-center text-md-end">
+            <a href="cv.pdf" class="btn btn-download" download>
+                Descargar CV <i class="fas fa-download"></i>
+            </a>
+        </div>
+    </div>
+        </div>
+
+    </div>
+</nav>
+
+
+
+        <!--  Start Section Nav Floating-->
         <nav class="floating-nav">
-            <a href="#home" class="nav-item" data-tooltip="Inicio">    <i class='bx bx-home' ></i></a>
+            <a href="#home" class="nav-item" data-tooltip="Home">    <i class='bx bx-home' ></i></a>
             <a href="#services" class="nav-item" data-tooltip="Servicios"><i class='bx bx-cog' ></i></a>
             <a href="#resumen" class="nav-item" data-tooltip="Resumen"><i class='bx bx-food-menu' ></i></a>
-            <a href="#portafolio" class="nav-item" data-tooltip="Porafolio"><i class='bx bx-briefcase' ></i></a>
+            <a href="#portafolio" class="nav-item" data-tooltip="Portafolio"><i class='bx bx-briefcase' ></i></a>
             <a href="#contacto" class="nav-item" data-tooltip="Contacto"><i class="bx bx-envelope"></i></a>
         </nav>
 
@@ -74,7 +109,7 @@
                
                 </div>
                 <div class="col-12 col-md-5 ">
-                <div class="scroll-indicator" id="scrollIndicator">
+                <div class="scroll-indicator animate__animated animate__zoomIn animate__delay-2s" id="scrollIndicator">
                     <div class="scroll-line"></div>
                     <div class="mouse-icon">
                         <div class="mouse-wheel"></div>
@@ -105,8 +140,8 @@
     </header>
 
     <!--  Start Section Servicios-->
-    <section id="services" class="container text-center pt-5 pb-5 section animar"  data-animation-in="animate__fadeIn" 
-    data-animation-out="animate__fadeOut">
+    <section id="services" class="container text-center pt-5 pb-5 section animar animate__delay-4s"  data-animation="animate__fadeIn" data-animation-in="animate__fadeIn" 
+    data-animation-out="animate__zoomOut">
 
 
   

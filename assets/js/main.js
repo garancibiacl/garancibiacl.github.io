@@ -1,14 +1,11 @@
-// Seleccionamos el navbar
-let navbar = document.getElementById('navbar');
-
-// Agregamos un evento de scroll
-window.onscroll = function() {
-  if (window.pageYOffset > 10) { // Cambia cuando se haya desplazado más de 50px
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-};
+window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
 
 
 let text = "Dev Front-End";

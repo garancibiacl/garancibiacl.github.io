@@ -121,7 +121,6 @@ li
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.6) !important; /* Más transparencia */
   backdrop-filter: blur(10px); /* Aplica desenfoque */
   -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
 }
@@ -595,3 +594,155 @@ li::marker {
 .nav-item:hover::before {
   opacity: 1;
 }
+
+
+
+       /* Navbar transparente con borde fino */
+       .navbar-custom {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Borde fino */
+        transition: all 0.3s ease-in-out;
+    }
+
+        /* Estilos base */
+        .navbar {
+          background: transparent;
+          transition: all 0.3s ease-in-out;
+      }
+      .navbar .navbar-brand,
+      .navbar .nav-link,
+      .navbar .user-name {
+          color: white;
+          transition: color 0.3s;
+      }
+      .navbar.scrolled {
+        background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+        backdrop-filter: blur(10px); /* Efecto blur */
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+      }
+    
+
+      /* Avatar */
+      .avatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          object-fit: cover;
+          transition: border-color 0.3s;
+      }
+      .navbar.scrolled .avatar {
+          border-color: rgba(0, 0, 0, 0.3);
+      }
+
+      /* Nombre y Rol */
+      .user-info {
+          display: flex;
+          flex-direction: column;
+      }
+      .user-name {
+          font-weight: 100;
+          font-size: 1rem;
+      }
+
+      /* Estilo de la etiqueta con efecto heartbeat */
+      .user-role {
+          font-size: 0.9rem;
+          font-weight: 100;
+          text-align: center;
+          transition: background 0.3s;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          position: relative;
+      }
+      .navbar.scrolled .user-role {
+          background: rgba(0, 0, 0, 0.2);
+      }
+
+ 
+
+
+/* Contenedor del latido */
+.heartbeat-container {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+
+/* Punto rojo con latido */
+.heartbeat-dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(26, 196, 0);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+/* Onda de radio */
+.heartbeat-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(26, 196, 0);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -40%);
+  z-index: 1;
+  animation: heartbeat-wave 1.5s infinite ease-in-out;
+}
+
+/* Animación del latido del punto */
+@keyframes heartbeat {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  25% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+  50% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+/* Animación de la onda de radio sincronizada */
+@keyframes heartbeat-wave {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  30% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.3; }
+  70% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+
+
+
+      /* Botón de descarga */
+      .btn-download {
+          background: linear-gradient(135deg, #007bff, #0056b3);
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          border-radius: 8px;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          transition: 0.3s;
+      }
+      .btn-download i {
+          transition: transform 0.3s ease-in-out;
+      }
+      .btn-download:hover i {
+          transform: translateX(5px);
+      }
+      .btn-download:hover {
+          background: linear-gradient(135deg, #0056b3, #003b80);
+      }
