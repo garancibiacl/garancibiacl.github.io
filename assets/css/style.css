@@ -621,8 +621,8 @@ li::marker {
           transition: color 0.3s;
       }
       .navbar.scrolled {
-        background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
-        backdrop-filter: blur(10px); /* Efecto blur */
+        background-color: rgba(7, 10, 27, 0.9); /* Fondo oscuro semitransparente */
+        backdrop-filter: blur(6px); /* Efecto blur */
         -webkit-backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
       }
