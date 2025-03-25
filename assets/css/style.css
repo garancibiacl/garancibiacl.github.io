@@ -171,9 +171,7 @@ section,
   background-color: var(--default-color);
 }
 
-i{
-  color: var(--heading-color);
-}
+
 
 /*--------------------------------------------------------------
 # Servicios Section
@@ -605,7 +603,7 @@ li::marker {
         left: 0;
         z-index: 1000;
         background: transparent;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Borde fino */
+        border-bottom: 1px solid rgb(255 255 255 / 7%);
         transition: all 0.3s ease-in-out;
     }
 
@@ -621,10 +619,10 @@ li::marker {
           transition: color 0.3s;
       }
       .navbar.scrolled {
-        background-color: rgba(7, 10, 27, 0.9); /* Fondo oscuro semitransparente */
+        background-color: rgba(33, 37, 41, 0.9); /* Fondo oscuro semitransparente */
         backdrop-filter: blur(6px); /* Efecto blur */
         -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+        border-bottom: 1px solid rgb(255 255 255 / 7%);
       }
     
 
@@ -662,10 +660,7 @@ li::marker {
           gap: 8px;
           position: relative;
       }
-      .navbar.scrolled .user-role {
-          background: rgba(0, 0, 0, 0.2);
-      }
-
+  
  
 
 
@@ -726,8 +721,7 @@ li::marker {
 
       /* Botón de descarga */
       .btn-download {
-          background: linear-gradient(135deg, #007bff, #0056b3);
-          color: white;
+    
           border: none;
           padding: 10px 15px;
           border-radius: 8px;
@@ -746,3 +740,17 @@ li::marker {
       .btn-download:hover {
           background: linear-gradient(135deg, #0056b3, #003b80);
       }
+
+      .bx-rotate-90 {
+        transform: rotate(320deg) !important;
+    }
+
+    .btn-light{
+      transition: transform 0.3s ease-in-out;
+      
+    }
+
+    .btn-light:hover i{
+      transform: translateX(5px);
+      
+    }
