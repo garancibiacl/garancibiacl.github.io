@@ -196,7 +196,7 @@ section,
 
 
 .service-item {
-  border: 1px solid #3d456b;
+  border: 1px solid rgb(61 69 107 / 53%);
   padding: 50px 30px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
@@ -379,6 +379,7 @@ li::marker {
   font-size: 40px; /* Tamaño del icono */
   margin-bottom: 20px; /* Espacio entre el icono y el texto */
   transition: color 0.3s; /* Transición suave para el icono */
+  color: var(--heading-color);
 }
 
 .block .text {
