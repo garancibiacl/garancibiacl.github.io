@@ -415,8 +415,8 @@ li::marker {
   transform: translateY(0);
 }
 
-
-.card {
+/* Card Seccion Contacto */
+.card-contact {
   background: linear-gradient(358deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   border-radius: 15px;
   position: relative;
@@ -425,7 +425,7 @@ li::marker {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card::before {
+.card-contact:before {
   content: "";
   position: absolute;
   top: -50%;
@@ -437,12 +437,12 @@ li::marker {
   transition: opacity 0.3s ease;
 }
 
-.card:hover {
+.card-contact:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
 }
 
-.card:hover::before {
+.card-contact:hover::before {
   opacity: 1;
 }
 
@@ -720,38 +720,19 @@ li::marker {
 
 
 
-      /* Botón de descarga */
-      .btn-download {
-    
-          border: none;
-          padding: 10px 15px;
-          border-radius: 8px;
-          font-size: 1rem;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          transition: 0.3s;
-      }
-      .btn-download i {
-          transition: transform 0.3s ease-in-out;
-      }
-      .btn-download:hover i {
-          transform: translateX(5px);
-      }
-      .btn-download:hover {
-          background: linear-gradient(135deg, #0056b3, #003b80);
-      }
+.btn-download {
 
-      .bx-rotate-90 {
-        transform: rotate(320deg) !important;
-    }
+  transition: background 0.3s, transform 0.2s;
+}
 
-    .btn-light{
-      transition: transform 0.3s ease-in-out;
-      
-    }
+.btn-download i {
+  transform: rotate(310deg);
+  transition: transform 0.3s ease-in-out;
+}
 
-    .btn-light:hover i{
-      transform: translateX(5px);
-      
-    }
+
+
+.btn-download:hover i {
+  transform: rotate(310deg) translateX(5px) ;
+}
+
