@@ -3,15 +3,15 @@
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/satoshi');
 
 
 
 
 /*========== Fonts ==========*/
 :root {
-  --heading-font: 
+
+  --satoshi-font: 
 }
 
 
@@ -44,7 +44,7 @@ html {
 }
 
 body {
-  font-family: "Onest", sans-serif;
+  font-family: "Satoshi", sans-serif;
   background-color: var(--background-color);
   /*background-image: radial-gradient(circle farthest-side at 75% 50%, #311566, var(--background-default) 62%);*/
 }
@@ -60,7 +60,7 @@ span,
 li
  {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: var(--satoshi-font);
 }
 
 .bg-nav {
@@ -203,6 +203,7 @@ section,
   height: 100%;
   transition: background-color 0.3s, color 0.3s; 
   color: var(--heading-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -272,6 +273,8 @@ section,
   background: var(--surface-color);
   padding: 40px;
   margin-bottom: 20px;
+  border: 1px solid rgba(7, 10, 27, 0.01);
+  box-shadow: rgba(255, 255, 255, 0.024) 0px 0.362176px 0.651917px -1px inset, rgba(255, 255, 255, 0.035) 0px 3px 5.4px -2px inset;
 }
 /*.cv-section h2 {
   border-bottom: 2px solid #007bff;
@@ -458,6 +461,7 @@ li::marker {
     align-items: center;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    
 }
 
 .scroll-line {
@@ -511,16 +515,25 @@ li::marker {
 
  /* Efecto hover */
  .scroll-indicator:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
+
+
+
+
+
+
+
 }
 
 .scroll-indicator:hover .scroll-line {
   background: linear-gradient(180deg, #f34852, #e0222d, #bc1923);
   box-shadow: 0 0 10px #e0222d;
+
 }
 
 .scroll-indicator:hover .mouse-icon {
   box-shadow: 0 0 15px #e0222d;
+
 }
 
 
