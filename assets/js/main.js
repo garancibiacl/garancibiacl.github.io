@@ -41,7 +41,7 @@ typeEffect();
 function copiarAlPortapapeles(texto) {
   navigator.clipboard.writeText(texto)
       .then(() => {
-          console.log("Texto copiado al portapapeles ✅");
+          console.log("garancibiacl@gmail.com copiado al portapapeles ✅");
       })
       .catch(err => {
           console.error("Error al copiar el texto", err);
@@ -56,7 +56,7 @@ function copiarEmail() {
         Swal.fire({
             icon: 'success',
             title: '¡Copiado!',
-            text: 'El email ha sido copiado al portapapeles.',
+            text: 'El email garancibiacl@gmail.com ha sido copiado al portapapeles.',
             timer: 2000,
             showConfirmButton: false
         });

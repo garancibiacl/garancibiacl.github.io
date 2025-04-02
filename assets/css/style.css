@@ -951,13 +951,14 @@ a:hover h6 {
   color: var(--default-color);
 }
 
-.icon-text-container {
+.icon-container {
 width: 30px;
 }
 
 .email-link {
   color: #ccc;
   text-decoration: none;
+  cursor: pointer;
 }
 .email-link:hover {
   color: white;
