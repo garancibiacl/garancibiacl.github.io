@@ -271,7 +271,7 @@ section,
 
 .cv-section {
   background: var(--surface-color);
-  padding: 40px;
+  padding: 30px 35px 25px 30px;
   margin-bottom: 20px;
   border: 1px solid rgba(7, 10, 27, 0.01);
   box-shadow: rgba(255, 255, 255, 0.024) 0px 0.362176px 0.651917px -1px inset, rgba(255, 255, 255, 0.035) 0px 3px 5.4px -2px inset;
@@ -749,3 +749,214 @@ li::marker {
   transform: rotate(310deg) translateX(5px) ;
 }
 
+.badge{
+  background-color: var(--background-color) !important;
+  border: 1px solid rgb(61 69 107 / 53%);
+}
+
+/* START TIME LINE */
+
+
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 20px; /* Espacio para la línea */
+}
+
+/* Línea vertical a la izquierda */
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(to bottom, rgb(232, 40, 53), rgb(234, 79, 89), rgb(239, 147, 153), #2b2e42);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-50%); /* Centrado de la línea */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-start; /* Alineación a la izquierda */
+  align-items: center;
+}
+
+/* Puntos con brillo decreciente */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: -25px; /* Alinea los puntos con la línea */
+  border: 2px solid white;
+  top: 0px;
+}
+
+.timeline-item:nth-child(1)::before {
+  background-color: var(--default-color);
+  box-shadow: 0 0 12px rgb(243, 73, 84);
+  animation: blink 1.5s infinite alternate;
+}
+
+.timeline-item:nth-child(2)::before {
+  background-color: var(--default-color);
+  box-shadow: 0 0 8px rgb(243, 73, 84);
+}
+
+.timeline-item:nth-child(3)::before {
+  background-color: var(--default-color);
+  box-shadow: 0 0 5px rgb(243, 73, 84);
+}
+
+.timeline-item:nth-child(4)::before {
+  background-color: var(--default-color);
+  box-shadow: 0 0 5px rgb(243, 73, 84);
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+  0% { box-shadow: 0 0 12px rgb(243, 72, 82); }
+  100% { box-shadow: 0 0 20pxrgb(243, 72, 82); }
+}
+
+.timeline-content {
+  width: 100%;
+  text-align: left;
+
+}
+
+.timeline-content h3 {
+  margin: 0;
+  color: #007bff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.year {
+
+font-size: 12px;
+}
+
+.cargo {
+  font-size: .8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline {
+      padding-left: 0;
+  }
+  .timeline::before {
+      left: 0;
+  }
+  .timeline-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  .timeline-content {
+      width: 100%;
+  }
+  .timeline-item::before {
+      left: -8px;
+  }
+}
+
+.empresa-año {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.empresa-año h3 {
+  margin: 0;
+  color: #007bff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+/* END TIME LINE */
+
+/* START CARRUSEL SKILLS */
+
+
+.swiper-container {
+  padding: 20px 0;
+}
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  transition-timing-function: linear !important; /* 👈 Movimiento totalmente fluido */
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto; /* 👈 Ajusta el ancho automáticamente */
+}
+.badge-custom {
+  font-size: 1rem;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-right: 2px; /* 👈 Espacio mínimo entre badges */
+}
+
+
+
+/* END CARRUSEL SKILLS */
+
+
+.img-container img {
+  height: 35px; /* Ajusta el tamaño según lo necesites */
+}
+
+a:hover h6 {
+  color: var(--default-color); /* Cambia a color rojo al pasar el cursor */
+}
+
+
+.contact-list a {
+  text-decoration: none;
+  color: var(--heading-color);
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espaciado entre icono y texto */
+  transition: color 0.5s ease-in-out;
+}
+
+.contact-list a i {
+  color: var(--heading-color);
+  transition: color 0.5s ease-in-out;
+}
+
+/* Cambio de color al pasar el cursor */
+.contact-list a:hover, 
+.contact-list a:hover i {
+  color: var(--default-color);
+}
+
+
+
+.email-link {
+  color: #ccc;
+  text-decoration: none;
+}
+.email-link:hover {
+  color: white;
+}

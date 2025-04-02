@@ -99,3 +99,16 @@ document.getElementById("scrollIndicator").addEventListener("click", function() 
 
 
 
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 2, // 👈 Espacio mínimo entre badges
+    loop: true,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+    },
+    speed: 4000, // 👈 Movimiento súper lento (15s)
+    freeMode: true,
+    allowTouchMove: false, // 👈 Evita interrupciones del usuario
+    loopAdditionalSlides: 1, // 👈 Previene saltos al volver al inicio
+});
