@@ -868,7 +868,7 @@ font-size: 12px;
       width: 100%;
   }
   .timeline-item::before {
-      left: -8px;
+      left: -6px;
   }
 }
 
