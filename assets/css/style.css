@@ -852,25 +852,7 @@ font-size: 12px;
   font-size: .8rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .timeline {
-      padding-left: 0;
-  }
-  .timeline::before {
-      left: 0;
-  }
-  .timeline-item {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-  .timeline-content {
-      width: 100%;
-  }
-  .timeline-item::before {
-      left: -6px;
-  }
-}
+
 
 .empresa-año {
   display: flex;
@@ -964,3 +946,28 @@ width: 30px;
   color: white;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline {
+      padding-left: 0;
+  }
+  .timeline::before {
+      left: 0;
+  }
+  .timeline-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  .timeline-content {
+      width: 100%;
+  }
+  .timeline-item::before {
+      left: -6px;
+  }
+
+  .empresa-año, .cargo{
+
+    margin-left: 20px;
+  }
+ 
+}
