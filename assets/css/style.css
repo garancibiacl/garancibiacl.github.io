@@ -951,7 +951,9 @@ a:hover h6 {
   color: var(--default-color);
 }
 
-
+.icon-text-container {
+width: 30px;
+}
 
 .email-link {
   color: #ccc;
@@ -960,3 +962,4 @@ a:hover h6 {
 .email-link:hover {
   color: white;
 }
+
