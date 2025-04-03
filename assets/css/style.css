@@ -45,9 +45,9 @@ html {
 
 body {
   font-family: "Satoshi", sans-serif;
-  background-color: var(--background-color);
+  /*background-color: var(--background-color);*/
   /*background-image: radial-gradient(circle farthest-side at 75% 50%, #311566, var(--background-default) 62%);*/
-}
+  background-color: rgb(14 9 24 / var(--tw-bg-opacity, 1));
 
 h1,
 h2,
@@ -70,7 +70,14 @@ li
   color: var(--default-color);
 }
 .title-default {
-  color: var(--default-color);
+  font-weight: bold;
+  text-align: center;
+  background-image: linear-gradient(140deg, #ff9b26, #ee4f27);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+
 }
 
 .social-links a i{
@@ -183,6 +190,8 @@ section,
   padding-bottom: 40px;
 }
 
+
+
 .servicios h2:after {
   content: "";
   position: absolute;
@@ -191,12 +200,14 @@ section,
   height: 3px;
   background: var(--default-color);
   margin: auto;
+  background-image: linear-gradient(140deg, #ff9b26, #ee4f27);
 }
 
 
 
 .service-item {
-  border: 1px solid rgb(61 69 107 / 53%);
+  border: 1px solid hsla(0, 0%, 100%, .16);
+  box-shadow: inset 0 1px #ff8e5d66;
   padding: 50px 30px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
@@ -204,14 +215,35 @@ section,
   transition: transform 0.5s ease, box-shadow 0.3s ease;
   color: var(--heading-color);
 
+  position: relative;
+  text-align: left;
+  overflow: hidden;
 }
+
+    /* Fondo degradado superior con efecto suave */
+    .service-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60%;
+      background-image: 
+          radial-gradient(circle at 30% 140%, rgba(217, 126, 75, .3), transparent 37%),
+          radial-gradient(circle at 50% 310%, #0400ff26, #a2a68700 78%),
+          linear-gradient(transparent, #0d0a195e),
+          radial-gradient(90% 60% at 50% 0, #a85c5c33, #67454500),
+          radial-gradient(90% 10% at 50% 0, #a85c5c0d, #67454500 90%);
+      background-blend-mode: overlay, multiply, normal;
+      opacity: 0.6;
+      border-radius: 12px 12px 0 0;
+      pointer-events: none;
+  }
 
 
 .service-item:hover  {
-  background-color: var(--heading-color);
-  border: 0px solid;
+
   transform: translateY(-10px);
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -236,13 +268,13 @@ section,
 }
 
 .service-item:hover p {
-  color: var(--background-color);
+  color: var(--heading-color);
 
 
 }
 
 .service-item:hover h4 {
-  color: var(--background-color);
+  color: var(--heading-color);
 
 
 }
@@ -252,7 +284,7 @@ section,
 
 
 .service-item:hover i {
-  color: var(--background-color);
+  color: var(--heading-color);
 
 
 }
@@ -273,24 +305,31 @@ section,
 --------------------------------------------------------------*/
 
 .cv-section {
-  background: var(--surface-color);
   padding: 30px 35px 25px 30px;
   margin-bottom: 20px;
-  border: 1px solid rgba(7, 10, 27, 0.01);
-  box-shadow: rgba(255, 255, 255, 0.024) 0px 0.362176px 0.651917px -1px inset, rgba(255, 255, 255, 0.035) 0px 3px 5.4px -2px inset;
+  border: 1px solid hsla(0, 0%, 100%, .16);
+  box-shadow: inset 0 1px #ff8e5d66;
+  color: var(--heading-color);
+  background-image: 
+  radial-gradient(circle at 30% 140%, rgba(75, 153, 217, 0.33) 0%, transparent 37%),
+  radial-gradient(circle at 50% 310%, rgba(4, 0, 255, 0.15) 0%, rgba(162, 166, 135, 0) 78%),
+  linear-gradient(transparent 0%, rgba(10, 22, 25, 0.37) 100%),
+  radial-gradient(circle at 50% -30%, rgba(168, 92, 92, 0.2) 0%, rgba(255, 19, 19, 0) 100%),
+  radial-gradient(90% 10% at 50% 0, rgba(168, 92, 92, 0.05) 0%, rgba(103, 69, 69, 0) 90%);
+background-blend-mode: overlay, multiply, normal, lighten, normal;
+transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
-/*.cv-section h2 {
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}*/
+
+.cv-section:hover{
+  
+  transform: translateY(-10px);
+}
 
 .cv-section i{
   color: var(--default-color);
 }
 .badge {
   margin-right: 5px;
-  background-color: var(--accent-color);
 }
 
 .icons {
@@ -309,9 +348,12 @@ li::marker {
  .card-back{
   background: var(--surface-color);
 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-back:hover{
-  border: 2px solid var(--accent-color);
+  border: 1px solid rgb(59 93 149 / 26%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
 }
 .card-title{
   color: var(--heading-color);
@@ -474,20 +516,6 @@ li::marker {
     animation: scrollEffect 1.5s infinite ease-in-out;
 }
 
-@keyframes scrollEffect {
-    0% {
-        height: 40px;
-        opacity: 0.5;
-    }
-    50% {
-        height: 100px;
-        opacity: 1;
-    }
-    100% {
-        height: 40px;
-        opacity: 0.5;
-    }
-}
 
 .mouse-icon {
     width: 30px;
@@ -636,10 +664,11 @@ li::marker {
           transition: color 0.3s;
       }
       .navbar.scrolled {
-        background-color: rgba(33, 37, 41, 0.9); /* Fondo oscuro semitransparente */
+        background-color: #020103; /* Fondo oscuro semitransparente */
         backdrop-filter: blur(6px); /* Efecto blur */
         -webkit-backdrop-filter: blur(10px);
         border-bottom: 1px solid rgb(255 255 255 / 7%);
+    border-color: rgb(42 25 25 / 60%);
       }
     
 
@@ -717,21 +746,6 @@ li::marker {
   animation: heartbeat-wave 1.5s infinite ease-in-out;
 }
 
-/* Animación del latido del punto */
-@keyframes heartbeat {
-  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-  25% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
-  50% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-}
-
-/* Animación de la onda de radio sincronizada */
-@keyframes heartbeat-wave {
-  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
-  30% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.3; }
-  70% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
-  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
-}
 
 
 
@@ -753,8 +767,8 @@ li::marker {
 }
 
 .badge{
-  background-color: var(--background-color) !important;
   border: 1px solid rgb(61 69 107 / 53%);
+  background-color: rgb(14, 9, 24);
 }
 
 /* START TIME LINE */
@@ -902,6 +916,30 @@ font-size: 12px;
   margin-right: 2px; /* 👈 Espacio mínimo entre badges */
 }
 
+  /* Efecto de difuminado progresivo en los extremos */
+  .fade-container {
+    position: relative;
+    width: 100%;
+}
+.fade-container::before,
+.fade-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 14%;
+    height: 67%;
+    z-index: 2;
+    pointer-events: none;
+}
+.fade-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgb(14, 9, 24), rgb(255 255 255 / 0%));
+}
+.fade-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgb(14, 9, 24), rgba(255, 255, 255, 0));
+}
+
 
 
 /* END CARRUSEL SKILLS */
@@ -913,6 +951,7 @@ font-size: 12px;
 
 a:hover h6 {
   color: var(--default-color); /* Cambia a color rojo al pasar el cursor */
+  transition: color 0.5s ease-in-out;
 }
 
 
@@ -984,3 +1023,74 @@ padding: 10px 0px;
  
 }
 
+}
+
+.effect-bg{
+  aspect-ratio: 1 / 2.2;
+            background-image: linear-gradient(#a13355, #5159d9);
+            border-radius: 800%;
+            filter: blur(128px);
+            left: 50%;
+            max-width: 150px;
+            opacity: 0.45;
+            position: absolute;
+            top: 55%;
+            transform: translate(-50%, -50%) rotate(80deg);
+            width: 80%;
+            z-index: -1;
+}
+
+.glow-effect {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(255,155,38,0.5) 10%, rgba(107,33,239,0.3) 80%);
+  border-radius: 50%;
+  opacity: 0;
+  filter: blur(50px);
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+
+
+
+
+
+/* START KEYFRAMES */
+
+
+/* Animación Scroll <Float*/
+@keyframes scrollEffect {
+  0% {
+      height: 40px;
+      opacity: 0.5;
+  }
+  50% {
+      height: 100px;
+      opacity: 1;
+  }
+  100% {
+      height: 40px;
+      opacity: 0.5;
+  }
+}
+
+
+/* Animación del latido del punto */
+@keyframes heartbeat {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  25% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+  50% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+/* Animación de la onda de radio sincronizada */
+@keyframes heartbeat-wave {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  30% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.3; }
+  70% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+
+/* FIN KEYFRAMES */

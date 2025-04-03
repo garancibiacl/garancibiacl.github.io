@@ -101,6 +101,8 @@
     <!--  Start Section Header-->
     <header id="home" class="text-light text-start pt-5 py-5 section animar pb-5 mt-5" data-animation="animate__fadeIn" data-animation-in="animate__fadeIn" 
     data-animation-out="animate__zoomOut">
+ 
+  
         <div class="container pt-5">
             <div class="row pt-3 ">
                 <div class="col-12 col-md-7 ">
@@ -147,7 +149,7 @@
     <section id="services" class="container text-center pt-5 pb-5 section animar "   data-animation-in="animate__fadeIn" 
     data-animation-out="animate__fadeOut">
 
-
+<div class="effect-bg"></div>
   
         <div class="row text-start pb-4 ">
 
@@ -162,8 +164,11 @@
 
  
             <div class="row ">
-                <div class="col-12  col-md-4  text-start pb-3 animate__animated animate__bounceInLeft animate__delay-2s "> 
-                    <div class="service-item">
+                
+                <div class="col-12  col-md-4  text-start pb-3 animate__animated animate__bounceInLeft animate__delay-2s "  onmousemove="showGlow(event, this)" onmouseleave="hideGlow(this)"> 
+                  
+                    <div class="service-item" >
+                        <div class="glow-effect" ></div>
                         <i class="bx bx-code-alt bx-lg my-3"></i>
                         <h4 class="my-3 fw-medium">Desarrollador Frontend</h4>
                         <p class="my-3 fw-light ">
@@ -172,8 +177,9 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4 text-start pb-3 animate__animated animate__bounceInDown animate__delay-1s ">
+                <div class="col-12 col-md-4 text-start pb-3 animate__animated animate__bounceInDown animate__delay-1s " onmousemove="showGlow(event, this)" onmouseleave="hideGlow(this)">
                     <div class="service-item">
+                             <div class="glow-effect" ></div>
                         <i class='bx bx-selection bx-lg my-3'></i>
                         <h4 class="my-3 fw-medium">Diseñador Web</h4>
                         <p class="my-3 fw-light">
@@ -182,8 +188,9 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4 text-start pb-3 animate__animated animate__bounceInRight animate__delay-2s">
+                <div class="col-12 col-md-4 text-start pb-3 animate__animated animate__bounceInRight animate__delay-2s" onmousemove="showGlow(event, this)" onmouseleave="hideGlow(this)">
                     <div class="service-item">
+                        <div class="glow-effect" ></div>
                         <i class='bx bx-cart-alt bx-lg my-3' ></i>
                         <h4 class="my-3 fw-medium">ConectaDeco</h4>
                         <p class="my-3 fw-light ">
@@ -207,27 +214,27 @@
 
             <div class="pb-4 servicios pt-5 ">
                 <p class="text-light fs-4">Resumen</p>
-                <h2 class="display-3 fw-bold title-default">Cv Frontend</h2>
+                <h2 class="display-3 fw-bold title-default gradient-text">Cv Frontend</h2>
             </div>
         </div>
 
  
         <div class="row pt-5 pb-5">
      
-            <div class="col-md-4 ">
+            <div class="col-md-4  ">
                 <!-- Sección Linea de tiempo -->
-                <div class="cv-section text-star rounded-4 text-start ">
-           
+                <div class="cv-section text-star rounded-4 text-start  ">
+    
                     <div class="title-experiencia">
-                    <h5 class="pb-4 fw-normal">Experiencia  <span class="badge rounded-pill text-bg-dark fw-lighter fs-9">O5 Years</span> </h5>
-                   
-                </div>
+                    <h5 class="pb-4 fw-normal">Experiencia  <span class="badge rounded-pill fw-lighter fs-9">O5 Years</span> </h5>
+      
                 
             
 
-        <div class="row">
+        <div class="row ">
         <!-- Columna para timeline -->
-        <div class="col-md-12">
+        <div class="col-md-12 ">
+           
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
@@ -285,7 +292,7 @@
         <!-- Columna para los timeline-items -->
     
     </div>
-
+</div>
             </div>
 
         
@@ -321,8 +328,17 @@
                 </div>-->
 
                 <h5 class="pb-4 fw-normal">Skills & Expertise</h5>
+                <div class="fade-container">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
+                        <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Diseñador Web</span></div>
+                        <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Ilustrador</span></div>
+                        <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Responsive</span></div>
+                        <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Mobile First</span></div>
+                        <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">GitHub</span></div>
+                        <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Figma</span></div>
+                        <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Adobe XD</span></div>
+                                <!-- Duplicamos para efecto de scroll infinito sin cortes -->
                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Diseñador Web</span></div>
                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Ilustrador</span></div>
                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Responsive</span></div>
@@ -336,7 +352,7 @@
 
                 <div class="swiper mySwiper pt-3 pb-5">
                     <div class="swiper-wrapper">
-                        <!-- Duplicamos para efecto de scroll infinito sin cortes -->
+                       
                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6 ">Adobe Ai</span></div>
                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Wordpress</span></div>
                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Mailing</span></div>
@@ -344,9 +360,19 @@
                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Creador de Interfaces</span></div>
                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Dev Front</span></div>
                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Diseño UX/UI</span></div>
+
+                         <!-- Duplicamos para efecto de scroll infinito sin cortes -->
+
+                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6 ">Adobe Ai</span></div>
+                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Wordpress</span></div>
+                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Mailing</span></div>
+                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">React</span></div>
+                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Creador de Interfaces</span></div>
+                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Dev Front</span></div>
+                         <div class="swiper-slide"><span class="badge rounded-pill fw-light fs-6">Diseño UX/UI</span></div>
                     </div>
                 </div>
-                
+            </div>
             </div>
             
                 <!-- Sección Educación -->
@@ -382,9 +408,13 @@
                 </div>
             </div>
 
-                   <!-- Columna Izquierda -->
+
+
+
+
+                <!-- Sección Connect-->
                    <div class="col-md-4 ">
-                    <!-- Sección Experiencia 5 años -->
+
                     <div class="cv-section text-star rounded-4 text-start ">
 
                             <h5 class="pb-4  fw-normal">Connect</h5>

@@ -112,3 +112,19 @@ var swiper = new Swiper(".mySwiper", {
     allowTouchMove: false, // 👈 Evita interrupciones del usuario
     loopAdditionalSlides: 1, // 👈 Previene saltos al volver al inicio
 });
+
+
+  function showGlow(event, card) {
+            let glow = card.querySelector(".glow-effect");
+            let rect = card.getBoundingClientRect();
+            let x = event.clientX - rect.left;
+            let y = event.clientY - rect.top;
+
+            glow.style.transform = `translate(${x - 75}px, ${y - 75}px)`;
+            glow.style.opacity = "1";
+        }
+
+        function hideGlow(card) {
+            let glow = card.querySelector(".glow-effect");
+            glow.style.opacity = "0";
+        }
