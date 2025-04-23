@@ -348,8 +348,8 @@ li::marker {
 /* Mis trabajos */
  .card-back{
  border-bottom: none;
- background: linear-gradient(126.6deg, rgba(124, 130, 177, .12) 28.69%, rgba(17, 18, 27, 0) 100%);
- border: 2px solid #292b3d;
+ background: linear-gradient(126.6deg, rgba(124, 130, 177, .12) 28.69%, rgba(17, 18, 27, 0) 100%) !important;
+ border: 2px solid #292b3d !important;
  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-back:hover{
