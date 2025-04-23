@@ -347,9 +347,10 @@ li::marker {
 
 /* Mis trabajos */
  .card-back{
-  background: var(--surface-color);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ border-bottom: none;
+ background: linear-gradient(126.6deg, rgba(124, 130, 177, .12) 28.69%, rgba(17, 18, 27, 0) 100%);
+ border: 2px solid #292b3d;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-back:hover{
   border: 1px solid rgb(59 93 149 / 26%);
